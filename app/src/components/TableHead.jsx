@@ -8,7 +8,7 @@ export default function TableHead() {
             <th scope="col">Name</th>
             <th scope="col">Price</th>
             <th scope="col">Today</th>
-            <th scope="col">Link</th>
+            <th scope="col">Go to</th>
           </tr>
         </thead>
     )

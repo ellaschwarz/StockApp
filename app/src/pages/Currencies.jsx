@@ -21,7 +21,7 @@ export default function Currencies(props) {
         <>
         <div>
         <h1>{title.toUpperCase()}</h1>
-        <table className="table table-striped table-dark">
+        <table className="table table-striped table-dark table-hover">
         <TableHead />
         {curencyData.sek && Object.entries(curencyData.sek).reverse().map((currency, index) => {
             return (

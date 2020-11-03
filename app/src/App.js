@@ -1,18 +1,18 @@
 import React, { useState, useEffect } from 'react';
 import { Switch, Route, Link } from 'react-router-dom';
 
-import Home from './pages/Home';
-import Markets from './pages/Markets';
-import Indexes from './pages/Indexes';
-import Currencies from './pages/Currencies';
+import { ApiContext } from './context/api-context';
+
 import Crypto from './pages/Crypto';
 import CryptoDetail from './pages/detail/CryptoDetail';
-import IndexDetail from './pages/detail/IndexDetail';
 import CurrencyDetail from './pages/detail/CurrencyDetail';
-import SingleMarket from './components/SingleMarket';
+import Currencies from './pages/Currencies';
+import Home from './pages/Home';
+import Indexes from './pages/Indexes';
+import IndexDetail from './pages/detail/IndexDetail';
+import Markets from './pages/Markets';
 import MarketDetail from './pages/detail/MarketDetail';
-
-import { ApiContext } from './context/api-context';
+import SingleMarket from './components/SingleMarket';
 
 function App() {
 	const [data, setData] = useState(null);
@@ -35,17 +35,17 @@ function App() {
 
 	return (
 		<>
-			<div className='container'>
-				<div className='content-wrap'>
+    				<div className='content-wrap'>
 					<div
 						className='py-160 text-center shadow-lg p-3 mb-5 rounded'
-						style={{ backgroundColor: '#020A27' }}
+						style={{backgroundImage: 'linear-gradient(135deg, #6833bd 0%, #070926 100%)'
+            }}
 					>
 						<div className='container shape-parent'>
 							<div className='row justify-content-conter mb-100'>
 								<div className='col-12 col-lg-8 col-xl-6'>
 									<h1 className='display-4 mb-20 text-white show-on-scroll show-on-scroll-ready'>
-										<Link className='text-white' to='/'>
+										<Link className='text-white logo' to='/'>
 											Stockly
 										</Link>
 									</h1>
@@ -54,6 +54,8 @@ function App() {
 						</div>
 					</div>
 				</div>
+			<div className='container'>
+
 
 				<></>
 				<Switch>

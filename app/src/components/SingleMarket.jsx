@@ -17,8 +17,8 @@ export default function SingleMarkets(props) {
         
         <>
         <div>
-            <h1>MARKETS</h1>
-        <table className="table table-striped table-dark">
+            <h1 className='heading2'>MARKETS</h1>
+        <table className="table table-striped table-dark table-hover">
         <TableHead />
         {marketData && Object.entries(marketData).reverse().map((market, index) => {
             return (

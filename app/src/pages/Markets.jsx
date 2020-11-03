@@ -17,17 +17,17 @@ export default function Markets(props) {
 
 	return (
 		<>
-			<h1>{title.toUpperCase()}</h1>
+			<h1 className='heading2 text-center'>{title.toUpperCase()}</h1>
 			<div className='container'>
-				<div className='row'>
+				<div className='row d-flex justify-content-center'>
 					{marketData &&
 						Object.entries(marketData)
 							.reverse()
 							.map((markets, index) => {
 								return (
 									<div
-										className='card shadow-lg p-3 mb-5 rounded'
-										style={{ width: '18rem', backgroundColor: '#020A27' }}
+										className='card shadow-lg p-3 mb-5 rounded box'
+										style={{ width: '18rem', backgroundColor: '#0a0d36d2' }}
 									>
 										<div className='card-body'>
 											<Link

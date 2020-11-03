@@ -1,9 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@800&family=Montserrat:wght@600&family=Turret+Road:wght@800&display=swap');
 * {
   /*background-color: #070926; */
   color: #fff1e6;
 }
 
-
+*:hover {
+  text-decoration: none;
+}
 
 body {
   margin: 0;
@@ -20,4 +23,23 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.logo {
+  font-family: 'Turret Road', cursive;
+  color: #0a0d36d2;
+}
+
+.box {
+  display: inline-block;
+  transition-duration: 0.3s;
+  transition-property: transform;
+  transform: translateZ(0);
+}
+.box:hover {
+  transform: translateY(-5px);
+}
+
+.heading2 {
+  font-family: 'Montserrat', sans-serif;
 }

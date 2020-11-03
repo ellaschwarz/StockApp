@@ -21,7 +21,7 @@ export default function Crypto(props) {
         <>
         <div>
         <h1>{title.toUpperCase()}</h1>
-        <table className="table table-striped table-dark">
+        <table className="table table-striped table-dark table-hover">
         <TableHead />
         {cryptoData.usd && Object.entries(cryptoData.usd).reverse().map((crypto, index) => {
             return (
