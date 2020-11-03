@@ -1,6 +1,7 @@
 import React, {useContext, useState, useEffect} from 'react'
 import {ApiContext} from '../context/api-context';
 import ListItem from '../components/ListItem'
+import TableHead from '../components/TableHead';
 
 
 export default function Crypto(props) {
@@ -23,6 +24,9 @@ export default function Crypto(props) {
         
         <>
         <div>
+        <h1>{title}</h1>
+        <table className="table table-striped table-dark">
+        <TableHead />
         {cryptoData.usd && Object.entries(cryptoData.usd).reverse().map((crypto, index) => {
             return (
                 <>
@@ -36,6 +40,7 @@ export default function Crypto(props) {
                 </>
                 )
         })}
+        </table>
         </div>
         </>
     )

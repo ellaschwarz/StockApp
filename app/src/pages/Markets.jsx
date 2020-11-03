@@ -1,42 +1,52 @@
-import React, {useContext, useState, useEffect} from 'react'
-import {ApiContext} from '../context/api-context';
-import {Switch, Route, Link} from 'react-router-dom';
+import React, { useContext, useState, useEffect } from 'react';
+import { ApiContext } from '../context/api-context';
+import { Switch, Route, Link } from 'react-router-dom';
 import SingleMarket from '../components/SingleMarket';
 
-
 export default function Markets(props) {
-    const {data} = useContext(ApiContext);
-    
-    const [marketData, setMarketData] = useState([])
+	const { data } = useContext(ApiContext);
 
-    useEffect(() => {
-        setMarketData(data.markets)
-    }, [])
+	const [marketData, setMarketData] = useState([]);
 
-    console.log(marketData.se)
-    console.log(Object.keys(data))
+	useEffect(() => {
+		setMarketData(data.markets);
+	}, []);
 
-    let keys = Object.keys(data)
-    let title = keys[3];
-    console.log(title);
+	console.log(marketData.se);
+	console.log(Object.keys(data));
 
-    //Map alla markets
-    //Lägg det sedan i links
+	let keys = Object.keys(data);
+	let title = keys[3];
+	console.log(title);
 
-    return (
-        
-        <>
-        <div>
-        <h1>{title}</h1>
+	//Map alla markets
+	//Lägg det sedan i links
 
-        {marketData && Object.entries(marketData).reverse().map((markets, index) => {
-            return (
-                <>
-                <li key={markets[0]}><Link to={`/markets/${markets[0]}`}>{markets[0]}</Link></li>
-                </>
-            )
-        })}
-        </div>
-        </>
-    )
+	return (
+		<>
+			<h1>{title}</h1>
+			{marketData &&
+				Object.entries(marketData)
+					.reverse()
+					.map((markets, index) => {
+						return (
+							<div className='container'>
+								<div className='row'>
+									<div
+										className='card shadow-lg p-3 mb-5 rounded'
+										style={{ width: '18rem', backgroundColor: '#020A27' }}
+									>
+										<div className='card-body'>
+
+												<Link className='text-white stretched-link'
+												key={markets[0]} to={`/markets/${markets[0]}`}>{markets[0]}</Link>
+										
+										</div>
+									</div>
+								</div>
+							</div>
+						);
+					})}
+		</>
+	);
 }

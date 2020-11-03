@@ -12,7 +12,6 @@ export default function MarketDetail(props) {
 
     useEffect(() => {
         setDetailData(data.markets[page][id])
-        console.log('HELLO MARKET DETAIL')
     }, [])
 
     console.log(detailData)

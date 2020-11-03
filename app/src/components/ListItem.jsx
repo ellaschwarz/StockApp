@@ -11,13 +11,22 @@ import {ApiContext} from '../context/api-context';
 export default function ListItem(props) {
     return (
 <>
-            <h1>{props.title}</h1>
-            <h1>{props.name}</h1>
-            <p>{props.price}</p>
-            <Link to={`${props.title}/${props.id}`}>Go to item</Link>
+  <tbody>
+    <tr>
+      <th scope="row"></th>
+      <td>{props.ticker}</td>
+      <td>{props.name}</td>
+      <td>{props.price}</td>
+      <td>{props.today}</td>
+      <td><Link to={`${props.title}/${props.id}`}>Go to item</Link></td>
+    </tr>
+  </tbody>
+
 </>
     )
 }
 
 
-
+{/* <h1>{props.name}</h1>
+<p>{props.price}</p>
+<Link to={`${props.title}/${props.id}`}>Go to item</Link> */}

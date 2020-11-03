@@ -10,7 +10,6 @@ export default function SingleMarkets(props) {
 
     useEffect(() => {
         setMarketData(data.markets[page])
-        console.log('heeeeej')
     }, [])
 
     return (
