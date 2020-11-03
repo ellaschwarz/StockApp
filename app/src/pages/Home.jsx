@@ -3,14 +3,15 @@ import React from 'react';
 import {Link} from 'react-router-dom';
 
 
-import marketImg from '../images/market.jpg'
+import marketImg from '../images/markets.jpg'
 import cryptoImg from '../images/crypto.jpg'
 import indexImg from '../images/index.jpg'
 import currencyImg from '../images/currency.jpg'
 
 export default function Home() {
 	return (
-		<div id='menu' className='container row d-flex justify-content-around'>
+		<div id='menu' className='container'>
+            <div className='row d-flex justify-content-around'>
 			<div
 				className='card shadow-lg p-3 mb-5 rounded'
 				style={{ width: '18rem', backgroundColor: '#020A27' }}
@@ -63,5 +64,6 @@ export default function Home() {
 				</div>
 			</div>
 		</div>
+        </div>
 	);
 }

@@ -35,7 +35,7 @@ function App() {
 
 	return (
 		<>
-			<div className='container' style={{ backgroundColor: '#070926' }}>
+			<div className='container'>
 				<div className='content-wrap'>
 					<div
 						className='py-160 text-center shadow-lg p-3 mb-5 rounded'

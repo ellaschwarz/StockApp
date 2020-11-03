@@ -12,41 +12,37 @@ export default function Markets(props) {
 		setMarketData(data.markets);
 	}, []);
 
-	console.log(marketData.se);
-	console.log(Object.keys(data));
-
 	let keys = Object.keys(data);
 	let title = keys[3];
-	console.log(title);
-
-	//Map alla markets
-	//Lägg det sedan i links
 
 	return (
 		<>
-			<h1>{title}</h1>
-			{marketData &&
-				Object.entries(marketData)
-					.reverse()
-					.map((markets, index) => {
-						return (
-							<div className='container'>
-								<div className='row'>
+			<h1>{title.toUpperCase()}</h1>
+			<div className='container'>
+				<div className='row'>
+					{marketData &&
+						Object.entries(marketData)
+							.reverse()
+							.map((markets, index) => {
+								return (
 									<div
 										className='card shadow-lg p-3 mb-5 rounded'
 										style={{ width: '18rem', backgroundColor: '#020A27' }}
 									>
 										<div className='card-body'>
-
-												<Link className='text-white stretched-link'
-												key={markets[0]} to={`/markets/${markets[0]}`}>{markets[0]}</Link>
-										
+											<Link
+												className='text-white stretched-link'
+												key={markets[0]}
+												to={`/markets/${markets[0]}`}
+											>
+												{markets[0]}
+											</Link>
 										</div>
 									</div>
-								</div>
-							</div>
-						);
-					})}
+								);
+							})}
+				</div>
+			</div>
 		</>
 	);
 }

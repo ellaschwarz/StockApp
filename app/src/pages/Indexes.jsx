@@ -1,6 +1,7 @@
 import React, {useContext, useState, useEffect} from 'react'
 import {ApiContext} from '../context/api-context';
 import ListItem from '../components/ListItem'
+import TableHead from '../components/TableHead';
 
 export default function Indexes(props) {
     const {data} = useContext(ApiContext);
@@ -11,28 +12,28 @@ export default function Indexes(props) {
         setIndexData(data.indexes)
     }, [])
 
-    console.log(indexData.se)
-    console.log(Object.keys(data))
-
     let keys = Object.keys(data)
     let title = keys[2];
-    console.log(title);
+
 
     return (
         
         <>
         <div>
+        <h1>{title.toUpperCase()}</h1>
+        <table className="table table-striped table-dark">
+        <TableHead />
         {indexData.se && Object.entries(indexData.se).reverse().map((indexes, index) => {
             return (
                 <ListItem 
                 key={index}
                 id={indexes[0]}
                 title={title}
-                name={indexes[1].name}
-                price={indexes[1].price}
+                data={indexes[1]}
                 />
                 )
         })}
+        </table>
         </div>
         </>
     )

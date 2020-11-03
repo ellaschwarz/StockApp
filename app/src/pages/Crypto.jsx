@@ -13,31 +13,26 @@ export default function Crypto(props) {
         setCryptoData(data.crypto)
     }, [])
 
-    console.log(cryptoData.usd)
-    console.log(Object.keys(data))
-
     let keys = Object.keys(data)
     let title = keys[0];
-    console.log(title);
 
     return (
         
         <>
         <div>
-        <h1>{title}</h1>
+        <h1>{title.toUpperCase()}</h1>
         <table className="table table-striped table-dark">
         <TableHead />
         {cryptoData.usd && Object.entries(cryptoData.usd).reverse().map((crypto, index) => {
             return (
-                <>
+                
                 <ListItem 
                 key={crypto[0]}
                 id={crypto[0]}
                 title={title}
-                name={crypto[1].name}
-                price={crypto[1].price}
+                data={crypto[1]}
                 />
-                </>
+                
                 )
         })}
         </table>

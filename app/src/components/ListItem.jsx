@@ -13,11 +13,10 @@ export default function ListItem(props) {
 <>
   <tbody>
     <tr>
-      <th scope="row"></th>
-      <td>{props.ticker}</td>
-      <td>{props.name}</td>
-      <td>{props.price}</td>
-      <td>{props.today}</td>
+      <td>{props.data.ticker}</td>
+      <td>{props.data.name}</td>
+      <td>{props.data.price}</td>
+      <td>{props.data.today}</td>
       <td><Link to={`${props.title}/${props.id}`}>Go to item</Link></td>
     </tr>
   </tbody>
