@@ -27,7 +27,7 @@ code {
 
 .logo {
   font-family: 'Turret Road', cursive;
-  color: #0a0d36d2;
+  /*color: rgba(10, 13, 54, 0.678); */
 }
 
 .box {
@@ -35,6 +35,7 @@ code {
   transition-duration: 0.3s;
   transition-property: transform;
   transform: translateZ(0);
+  background-color: rgba(10, 13, 54, 0.568) !important; 
 }
 .box:hover {
   transform: translateY(-5px);

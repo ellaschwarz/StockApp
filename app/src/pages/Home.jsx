@@ -13,7 +13,7 @@ export default function Home() {
 			<div className='row d-flex justify-content-around'>
 				<div
 					className='card shadow-lg p-3 mb-5 rounded box'
-					style={{ width: '18rem', backgroundColor: '#020A27' }}
+					style={{ width: '18rem'}}
 				>
 					<img src={marketImg} className='card-img-top' alt='Market' />
 					<div className='card-body text-center'>

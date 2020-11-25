@@ -5,15 +5,14 @@ import lineChart from '../images/lineChart.png';
 export default function ItemDetail(props) {
 	return (
 		<div className='container'>
+            <h1 className='heading2'>{props.data.name}</h1>
+
 			<div className='row d-flex justify-content-center'>
 				<img style={{ width: '25rem' }} src={Graph} alt='Graph' />
 				<img style={{ width: '25rem' }} src={lineChart} alt='Linechart' />
 			</div>
 
-			<h1 className='heading2'>{props.data.name}</h1>
-
-			<div className='row d-flex shadow-lg justify-content-center' style={{ width: '100%', backgroundColor: '#020A27' }}
->
+			<div className='row d-flex shadow-lg justify-content-center p-5 m-auto rounded box'>
 				<table className='table table-borderless'>
 					<tbody>
 						<tr>
